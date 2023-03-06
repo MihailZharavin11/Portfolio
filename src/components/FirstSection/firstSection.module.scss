@@ -1,0 +1,59 @@
+.firstSection {
+  display: grid;
+  align-items: end;
+  height: 100vh;
+  margin-bottom: 100px;
+  .title {
+    display: flex;
+    flex-direction: column;
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 180px;
+    color: #eeeeee;
+    .titleTop {
+      display: flex;
+      align-items: center;
+      img {
+        flex: 1;
+        align-self: center;
+        height: 147px;
+        max-width: 700px;
+        min-width: 200px;
+        width: 100%;
+        margin: 0px 27px;
+      }
+      .text {
+        flex: 0;
+      }
+    }
+    .titleBottom {
+      text-align: right;
+    }
+  }
+}
+
+.gifWrapper {
+  flex: 1;
+  align-self: center;
+  height: 147px;
+  max-width: 700px;
+  min-width: 200px;
+  width: 100%;
+  margin: 0px 27px;
+  display: grid;
+  grid-template: 1fr / repeat(2, 1fr);
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.gif1 {
+  background: url("https://media.giphy.com/media/vzO0Vc8b2VBLi/giphy.gif");
+  background-size: cover;
+}
+
+.gif2 {
+  background: url("https://media.giphy.com/media/maNB0qAiRVAty/giphy.gif");
+  background-size: cover;
+  background-position: center;
+}

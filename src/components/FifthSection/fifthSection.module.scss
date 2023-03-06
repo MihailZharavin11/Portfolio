@@ -1,0 +1,25 @@
+.wrapper {
+  display: grid;
+  grid-template: 138px / repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 100px;
+}
+
+.card {
+  padding: 16px;
+  background-color: #eee;
+  font-family: "Switzer";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  color: #1b1b1b;
+  border-radius: 24px 24px 0px 0px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.purple {
+  background: #3d48bf;
+  color: #eee;
+}
