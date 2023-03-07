@@ -1,7 +1,10 @@
+@import "../../scss/abstracts/variables";
+
 .wrapper {
   margin-bottom: 100px;
   display: flex;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .title {
@@ -10,25 +13,13 @@
   font-family: "Oswald";
   font-style: normal;
   font-weight: 700;
-  font-size: 180px;
+  @include adaptive-FS(56, 180);
   color: #eeeeee;
 }
 
 .titleBottom {
   display: flex;
   align-items: center;
-  img {
-    flex: 1;
-    align-self: center;
-    height: 147px;
-    max-width: 700px;
-    min-width: 200px;
-    width: 100%;
-    margin: 0px 27px;
-  }
-  .text {
-    flex: 0;
-  }
 }
 
 .gifWrapper {
@@ -40,9 +31,15 @@
   min-width: 200px;
   width: 100%;
   display: grid;
-  grid-template: 1fr / repeat(2, 1fr);
+  grid-template: 1fr / repeat(2, minmax(300px, auto));
   overflow: hidden;
   border-radius: 24px;
+  @media (max-width: 1024px) {
+    height: 248px;
+  }
+  @media (max-width: $layout-breakpoint-small) {
+    display: none;
+  }
 }
 
 .gif {

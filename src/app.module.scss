@@ -1,4 +1,14 @@
+@import "./scss/abstracts/variables";
+
 .wrapper {
   background: #1b1b1b;
   padding: 50px 50px;
+
+  @media (max-width: $layout-breakpoint-small) {
+    padding: 25px;
+  }
+
+  @media (max-width: $layout-breakpoint-xsmall) {
+    padding: 16px;
+  }
 }

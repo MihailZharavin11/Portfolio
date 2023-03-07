@@ -1,8 +1,18 @@
+@import "../../scss/abstracts/variables";
+
 .wrapper {
   display: grid;
   grid-template: 138px / repeat(4, 1fr);
   gap: 10px;
   margin-bottom: 100px;
+  height: 100%;
+  @media (max-width: 1024px) {
+    grid-template: 138px 138px / 1fr 1fr;
+  }
+  @media (max-width: $layout-breakpoint-xsmall) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .card {
@@ -17,6 +27,9 @@
   border-radius: 24px 24px 0px 0px;
   display: flex;
   align-items: flex-end;
+  @media (max-width: $layout-breakpoint-xsmall) {
+    height: 138px;
+  }
 }
 
 .purple {

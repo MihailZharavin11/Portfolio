@@ -3,12 +3,12 @@ $layout-breakpoint-xxl: 1920px;
 $layout-breakpoint-large: 1440px;
 $layout-breakpoint-medium: 960px;
 $layout-breakpoint-small: 768px;
-$layout-breakpoint-xsmall: 480px;
+$layout-breakpoint-xsmall: 375px;
 
 //mixin
 
 $maxWidth: 1440;
-$minWidth: 320;
+$minWidth: 375;
 
 @mixin adaptive-FS($minFS, $maxFS) {
   font-size: calc(

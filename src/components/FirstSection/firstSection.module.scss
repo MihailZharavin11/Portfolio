@@ -1,34 +1,41 @@
+@import "../../scss/abstracts/variables";
+
 .firstSection {
   display: grid;
   align-items: end;
   height: 100vh;
   margin-bottom: 100px;
+
+  @media (max-width: $layout-breakpoint-xsmall) {
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: $layout-breakpoint-medium) {
+    align-items: center;
+    height: calc(100vh - 100px);
+  }
   .title {
+    position: relative;
     display: flex;
     flex-direction: column;
     font-family: "Oswald";
+    @include adaptive-FS(56, 180);
     font-style: normal;
     font-weight: 700;
-    font-size: 180px;
     color: #eeeeee;
     .titleTop {
+      position: relative;
       display: flex;
-      align-items: center;
-      img {
-        flex: 1;
-        align-self: center;
-        height: 147px;
-        max-width: 700px;
-        min-width: 200px;
-        width: 100%;
-        margin: 0px 27px;
-      }
       .text {
         flex: 0;
       }
+      @media (max-width: $layout-breakpoint-medium) {
+        flex-wrap: wrap;
+        justify-self: flex-start;
+      }
     }
     .titleBottom {
-      text-align: right;
+      text-align: end;
     }
   }
 }
@@ -45,6 +52,27 @@
   grid-template: 1fr / repeat(2, 1fr);
   overflow: hidden;
   border-radius: 24px;
+  @media (max-width: 1250px) {
+    height: 120px;
+    margin-top: 10px;
+  }
+  @media (max-width: 1024px) {
+    margin-top: 10px;
+    height: 110px;
+  }
+  @media (max-width: $layout-breakpoint-medium) {
+    order: 3;
+    height: 132px;
+    max-width: 500px;
+    min-width: 343px;
+    margin: 0px auto;
+  }
+  @media (max-width: $layout-breakpoint-small) {
+    height: 100px;
+    max-width: 500px;
+    min-width: 180px;
+    margin: 0 auto;
+  }
 }
 
 .gif1 {

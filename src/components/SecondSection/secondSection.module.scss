@@ -1,44 +1,95 @@
+@import "../../scss/abstracts/variables";
+
 .secondSection {
   margin-bottom: 100px;
   height: 360px;
   display: grid;
   grid-template: 1fr/1fr 1fr;
 
+  @media (max-width: $layout-breakpoint-xsmall) {
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: $layout-breakpoint-small) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
   .introduce {
+    padding-top: 50px;
+    padding-right: 66px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
     font-family: "Switzer";
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 42px;
     color: #eeeeee;
-    padding-top: 50px;
-    padding-right: 100px;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    @media (max-width: 1024px) {
+      padding: 36px 36px 0px 0px;
+    }
+    @media (max-width: $layout-breakpoint-medium) {
+      padding: 26px 26px 0px 0px;
+      font-size: 26px;
+    }
+    @media (max-width: $layout-breakpoint-small) {
+      border: none;
+      padding: 0;
+      font-size: 32px;
+      padding-bottom: 48px;
+    }
+    @media (max-width: $layout-breakpoint-xsmall) {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 600;
+    }
   }
   .working {
-    padding: 50px 51px 39px 51px;
+    padding: 50px 50px 39px 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background: #3d48bf;
     border-radius: 0px 24px 24px 0px;
+
+    @media (max-width: $layout-breakpoint-small) {
+      padding: 36px;
+    }
+    @media (max-width: $layout-breakpoint-xsmall) {
+      padding: 16px;
+    }
     .title {
       font-family: "Switzer";
       font-style: normal;
       font-weight: 700;
       font-size: 32px;
       line-height: 42px;
-      text-transform: uppercase;
       color: #eeeeee;
+      @media (max-width: 1024px) {
+        font-size: 32px;
+      }
+      @media (max-width: $layout-breakpoint-small) {
+        margin-bottom: 80px;
+      }
+      @media (max-width: $layout-breakpoint-xsmall) {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 72px;
+      }
     }
     .content {
       font-family: "Switzer";
       font-style: normal;
       font-weight: 400;
-      font-size: 20px;
       line-height: 26px;
       color: #eeeeee;
+      font-size: 20px;
+      @media (max-width: 1024px) {
+        font-size: 16px;
+        line-height: 21px;
+      }
     }
   }
 }
