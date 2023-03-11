@@ -4,13 +4,33 @@ import styles from "./thirdSection.module.scss";
 
 export const ThirdSection = () => {
   const projectItemTop = [
-    { type: "<PET PROJECT/>", year: "2022", title: "FILM X" },
-    { type: "<PET PROJECT/>", year: "2022", title: "RICK & MORTY" },
+    {
+      type: "<PET PROJECT/>",
+      year: "2022",
+      title: "FILM X",
+      path: "https://film-x-mihailzharavin11.vercel.app/",
+    },
+    {
+      type: "<PET PROJECT/>",
+      year: "2022",
+      title: "RICK & MORTY",
+      path: "https://rick-morty-mihailzharavin11.vercel.app/",
+    },
   ];
 
   const projectItemBottom = [
-    { type: "<PET PROJECT/>", year: "2022", title: "NOTES" },
-    { type: "<PET PROJECT/>", year: "2022", title: "FAKE CHAT" },
+    {
+      type: "<PET PROJECT/>",
+      year: "2022",
+      title: "NOTES",
+      path: "https://github.com/MihailZharavin11/noteApp",
+    },
+    {
+      type: "<PET PROJECT/>",
+      year: "2022",
+      title: "FAKE CHAT",
+      path: "https://fakechat-mihailzharavin11.vercel.app/",
+    },
   ];
 
   return (
@@ -25,6 +45,7 @@ export const ThirdSection = () => {
               year={item.year}
               type={item.type}
               index={index + 1}
+              path={item.path}
             />
           ))}
         </div>
@@ -36,6 +57,7 @@ export const ThirdSection = () => {
               year={item.year}
               type={item.type}
               index={index + 3}
+              path={item.path}
             />
           ))}
         </div>

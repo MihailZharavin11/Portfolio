@@ -1,5 +1,9 @@
 @import "../../scss/abstracts/variables";
 
+.link {
+  height: 100%;
+}
+
 .card {
   position: relative;
   background-color: #eee;
@@ -14,6 +18,8 @@
   align-items: flex-end;
   overflow: hidden;
   cursor: pointer;
+  z-index: 200;
+  height: 100%;
 
   .cardInner {
     display: flex;
@@ -65,4 +71,8 @@
   to {
     transform: translateX(-50%);
   }
+}
+
+a {
+  text-decoration: none;
 }

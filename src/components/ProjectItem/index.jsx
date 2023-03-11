@@ -1,9 +1,14 @@
 import React from "react";
 import styles from "./projectItem.module.scss";
 
-export const ProjectItem = ({ title, year, type, index }) => {
+export const ProjectItem = ({ title, year, type, index, path }) => {
   return (
-    <div className={`${styles.card} ${styles["card" + index]}`}>
+    <div
+      onClick={() => {
+        window.open(path);
+      }}
+      className={`${styles.card} ${styles["card" + index]}`}
+    >
       <div className={styles.cardHeader}>
         <div className={styles.cardType}>{type}</div>
         <div className={styles.year}>{year}</div>
