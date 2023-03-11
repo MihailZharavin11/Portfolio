@@ -1,54 +1,43 @@
 import React from "react";
+import { ProjectItem } from "../ProjectItem";
 import styles from "./thirdSection.module.scss";
 
 export const ThirdSection = () => {
+  const projectItemTop = [
+    { type: "<PET PROJECT/>", year: "2022", title: "FILM X" },
+    { type: "<PET PROJECT/>", year: "2022", title: "RICK & MORTY" },
+  ];
+
+  const projectItemBottom = [
+    { type: "<PET PROJECT/>", year: "2022", title: "NOTES" },
+    { type: "<PET PROJECT/>", year: "2022", title: "FAKE CHAT" },
+  ];
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>PROJECT</div>
       <div className={styles.cardWrapper}>
         <div className={styles.cardsTop}>
-          <div className={`${styles.card} ${styles.card1}`}>
-            <div className={styles.cardHeader}>
-              <div className={styles.cardType}>{`<PET PROJECT/>`}</div>
-              <div className={styles.year}>2022</div>
-            </div>
-            <div className={styles.cardFooter}>
-              <span className={styles.number}>01/</span>
-              FILM X
-            </div>
-          </div>
-          <div className={`${styles.card} ${styles.card2}`}>
-            <div className={styles.cardHeader}>
-              <div className={styles.cardType}>{`<PET PROJECT/>`}</div>
-              <div className={styles.year}>2022</div>
-            </div>
-            <div className={styles.cardFooter}>
-              <span className={styles.number}>02/</span>
-              RICK & MORTY
-            </div>
-          </div>
+          {projectItemTop.map((item, index) => (
+            <ProjectItem
+              key={item.title}
+              title={item.title}
+              year={item.year}
+              type={item.type}
+              index={index + 1}
+            />
+          ))}
         </div>
         <div className={styles.cardsBottom}>
-          <div className={`${styles.card} ${styles.card3}`}>
-            <div className={styles.cardHeader}>
-              <div className={styles.cardType}>{`<PET PROJECT/>`}</div>
-              <div className={styles.year}>2022</div>
-            </div>
-            <div className={styles.cardFooter}>
-              <span className={styles.number}>03/</span>
-              NOTES
-            </div>
-          </div>
-          <div className={`${styles.card} ${styles.card4}`}>
-            <div className={styles.cardHeader}>
-              <div className={styles.cardType}>{`<PET PROJECT/>`}</div>
-              <div className={styles.year}>2022</div>
-            </div>
-            <div className={styles.cardFooter}>
-              <span className={styles.number}>04/</span>
-              FAKE CHAT
-            </div>
-          </div>
+          {projectItemBottom.map((item, index) => (
+            <ProjectItem
+              key={item.title}
+              title={item.title}
+              year={item.year}
+              type={item.type}
+              index={index + 3}
+            />
+          ))}
         </div>
       </div>
     </div>

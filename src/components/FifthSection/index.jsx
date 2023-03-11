@@ -1,21 +1,14 @@
 import React from "react";
+import { LinkItem } from "../LinkItem";
 import styles from "./fifthSection.module.scss";
 
 export const FifthSection = () => {
+  const cardItem = ["<LINKEDIN/>", "<EMAIL/>", "<TELEGRAM/>", "<RESUME/>"];
   return (
     <div className={styles.wrapper}>
-      <div className={styles.card}>
-        <span className={styles.cardText}>{"<LINKEDIN/>"}</span>
-      </div>
-      <div className={styles.card}>
-        <span>{"<EMAIL/>"}</span>
-      </div>
-      <div className={styles.card}>
-        <span>{"<TELEGRAM/>"}</span>
-      </div>
-      <div className={`${styles.card} ${styles.purple}`}>
-        <span>{"<RESUME/>"}</span>
-      </div>
+      {cardItem.map((item) => (
+        <LinkItem title={item} />
+      ))}
     </div>
   );
 };
