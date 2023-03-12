@@ -23,7 +23,7 @@ export const ThirdSection = () => {
       type: "<PET PROJECT/>",
       year: "2022",
       title: "NOTES",
-      path: "https://github.com/MihailZharavin11/noteApp",
+      path: "https://note-app-mihailzharavin11.vercel.app/",
     },
     {
       type: "<PET PROJECT/>",

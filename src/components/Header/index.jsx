@@ -6,10 +6,10 @@ export const Header = () => {
   return (
     <div className={styles.header}>
       <div className={styles.logo}>{"<MZH/>"}</div>
-      {/* <ul className={styles.navigation}>
+      <ul className={styles.navigation}>
         <li className={styles.navigationItem}>WORK</li>
         <li className={styles.navigationItem}>CONTACT</li>
-      </ul> */}
+      </ul>
       <div
         onClick={() => {
           setOpen((prev) => !prev);
