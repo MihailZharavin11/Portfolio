@@ -3,7 +3,7 @@
 .firstSection {
   display: grid;
   align-items: end;
-  height: 100vh;
+  height: calc(100vh - 104.8px);
   margin-bottom: 100px;
 
   @media (max-width: $layout-breakpoint-xsmall) {

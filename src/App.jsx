@@ -10,7 +10,6 @@ import { ThirdSection } from "./components/ThirdSection";
 function App() {
   return (
     <div className={styles.wrapper}>
-      <Header />
       <FirstSection />
       <SecondSection />
       <ThirdSection />

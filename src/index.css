@@ -21,6 +21,23 @@ code {
   box-sizing: border-box;
 }
 
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
 @font-face {
   font-family: "Switzer";
   src: local("Cyrvetica"),
@@ -50,4 +67,10 @@ code {
     url("./utils/fonts/Switzer-Semibold.otf") format("truetype");
   font-weight: 600;
   font-style: normal;
+}
+
+:root {
+  --black: #1b1b1b;
+  --white: #eee;
+  --blue: #3d48bf;
 }

@@ -1,38 +1,10 @@
 import React from "react";
 import { ProjectItem } from "../ProjectItem";
 import styles from "./thirdSection.module.scss";
+import { projectItemBottom } from "../../data.js";
+import { projectItemTop } from "../../data.js";
 
 export const ThirdSection = () => {
-  const projectItemTop = [
-    {
-      type: "<PET PROJECT/>",
-      year: "2022",
-      title: "FILM X",
-      path: "https://film-x-mihailzharavin11.vercel.app/",
-    },
-    {
-      type: "<PET PROJECT/>",
-      year: "2022",
-      title: "RICK & MORTY",
-      path: "https://rick-morty-mihailzharavin11.vercel.app/",
-    },
-  ];
-
-  const projectItemBottom = [
-    {
-      type: "<PET PROJECT/>",
-      year: "2022",
-      title: "NOTES",
-      path: "https://note-app-mihailzharavin11.vercel.app/",
-    },
-    {
-      type: "<PET PROJECT/>",
-      year: "2022",
-      title: "FAKE CHAT",
-      path: "https://fakechat-mihailzharavin11.vercel.app/",
-    },
-  ];
-
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>PROJECT</div>

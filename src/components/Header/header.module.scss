@@ -1,40 +1,45 @@
 @import "../../scss/abstracts/variables";
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 24px;
-  border-bottom: 1px solid white;
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 30px;
-  color: white;
-  .logo {
+.wrapper {
+  height: 105px;
+  background: var(--black);
+  padding: 50px 50px 0px 50px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 24px;
+    border-bottom: 1px solid white;
     font-family: "Oswald";
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 30px;
-    color: #eeeeee;
-    cursor: pointer;
-  }
-  .navigation {
-    display: flex;
-    list-style-type: none;
-    gap: 80px;
-    @media (max-width: $layout-breakpoint-xsmall) {
-      display: none;
-    }
-    .navigationItem {
+    color: white;
+    .logo {
       font-family: "Oswald";
       font-style: normal;
-      font-weight: 400;
+      font-weight: 500;
       font-size: 20px;
       line-height: 30px;
+      color: #eeeeee;
       cursor: pointer;
+    }
+    .navigation {
+      display: flex;
+      list-style-type: none;
+      gap: 80px;
+      @media (max-width: $layout-breakpoint-xsmall) {
+        display: none;
+      }
+      .navigationItem {
+        font-family: "Oswald";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        cursor: pointer;
+      }
     }
   }
 }
@@ -55,7 +60,7 @@
     height: 3px;
     width: 100%;
     border-radius: 10px;
-    background: #eee;
+    background: var(--white);
     transition: 0.3s linear;
   }
   span:nth-child(1) {
