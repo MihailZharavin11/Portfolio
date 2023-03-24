@@ -8,7 +8,7 @@
     position: relative;
     display: grid;
     grid-template-areas:
-      "title . image image"
+      "title title image image"
       "description description image image"
       ". links image image";
 
@@ -21,6 +21,7 @@
   flex-direction: column;
   grid-area: title;
   padding-top: 50px;
+  width: calc(720px - 100px);
   .titleText {
     font-weight: 700;
     font-size: 80px;

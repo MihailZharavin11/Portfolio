@@ -1,12 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./projectItem.module.scss";
 
 export const ProjectItem = ({ title, year, type, index, path }) => {
   return (
-    <div
-      onClick={() => {
-        window.open(path);
-      }}
+    <Link
+      preventScrollReset={false}
+      to={path}
       className={`${styles.card} ${styles["card" + index]}`}
     >
       <div className={styles.cardHeader}>
@@ -17,6 +17,6 @@ export const ProjectItem = ({ title, year, type, index, path }) => {
         <span className={styles.number}>0{index}/</span>
         {title}
       </div>
-    </div>
+    </Link>
   );
 };

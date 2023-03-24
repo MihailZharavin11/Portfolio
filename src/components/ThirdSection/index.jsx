@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 import { ProjectItem } from "../ProjectItem";
 import styles from "./thirdSection.module.scss";
 import { projectItemBottom } from "../../data.js";
 import { projectItemTop } from "../../data.js";
 
-export const ThirdSection = () => {
+export const ThirdSection = ({ workRef }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>PROJECT</div>
       <div className={styles.cardWrapper}>
-        <div className={styles.cardsTop}>
+        <div ref={workRef} className={styles.cardsTop}>
           {projectItemTop.map((item, index) => (
             <ProjectItem
               key={item.title}

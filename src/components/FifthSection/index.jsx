@@ -2,7 +2,7 @@ import React from "react";
 import { LinkItem } from "../LinkItem";
 import styles from "./fifthSection.module.scss";
 
-export const FifthSection = () => {
+export const FifthSection = ({ contactRef }) => {
   const cardItem = [
     {
       title: "<LINKEDIN/>",
@@ -23,7 +23,7 @@ export const FifthSection = () => {
   ];
 
   return (
-    <div className={styles.wrapper}>
+    <div ref={contactRef} className={styles.wrapper}>
       {cardItem.map((item, index) => (
         <LinkItem key={item + index} title={item.title} path={item.path} />
       ))}

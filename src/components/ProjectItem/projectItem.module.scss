@@ -12,6 +12,7 @@
   position: relative;
   z-index: 22;
   cursor: pointer;
+  text-decoration: none;
 
   overflow: hidden;
   @media (max-width: $layout-breakpoint-small) {

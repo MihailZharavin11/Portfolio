@@ -5,6 +5,7 @@ import styles from "./button.module.scss";
 export const Button = ({ primary = false, border = false, title, path }) => {
   return (
     <Link
+      preventScrollReset={true}
       to={path}
       className={`${styles.button} ${primary ? styles.color : ""} ${
         border ? styles.border : ""
