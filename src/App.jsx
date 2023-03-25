@@ -8,6 +8,7 @@ import { useRef } from "react";
 const App = () => {
   const workRef = useRef(null);
   const contactRef = useRef(null);
+
   return (
     <Routes>
       <Route

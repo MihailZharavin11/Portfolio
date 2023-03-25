@@ -1,8 +1,9 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import { ProjectItem } from "../ProjectItem";
 import styles from "./thirdSection.module.scss";
 import { projectItemBottom } from "../../data.js";
 import { projectItemTop } from "../../data.js";
+import { ElementContext } from "../../App";
 
 export const ThirdSection = ({ workRef }) => {
   return (

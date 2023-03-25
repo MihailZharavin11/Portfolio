@@ -1,18 +1,27 @@
+@import "../../scss/abstracts/variables";
 .wrapper {
   height: 100%;
   background: var(--black);
   padding: 0px 50px;
   font-family: "Switzer";
   font-style: normal;
+
   .projectDescriptionInner {
     position: relative;
     display: grid;
     grid-template-areas:
       "title title image image"
       "description description image image"
-      ". links image image";
+      "links links image image";
 
     border-bottom: 1px solid var(--white);
+    @media (max-width: $layout-breakpoint-small) {
+      grid-template-areas:
+        "title title title title"
+        "image image image image"
+        "description description description description "
+        "links links links links";
+    }
   }
 }
 
@@ -21,18 +30,45 @@
   flex-direction: column;
   grid-area: title;
   padding-top: 50px;
-  width: calc(720px - 100px);
+  width: 100%;
+
+  @media (max-width: $layout-breakpoint-small) {
+    margin-bottom: 36px;
+  }
+
+  @media (max-width: $layout-breakpoint-xsmall) {
+    margin-bottom: 24px;
+  }
+
   .titleText {
     font-weight: 700;
     font-size: 80px;
     line-height: 119px;
     color: var(--white);
     margin: 0px;
+    @media (max-width: 1024px) {
+      font-size: 64px;
+      line-height: 95px;
+    }
+    @media (max-width: $layout-breakpoint-small) {
+      font-size: 56px;
+      line-height: 56px;
+    }
+    @media (max-width: $layout-breakpoint-xsmall) {
+      font-size: 48px;
+      line-height: 71px;
+    }
   }
   .subTitle {
+    font-weight: 400;
     font-size: 16px;
+    line-height: 21px;
     color: var(--white);
     margin-left: 3px;
+    @media (max-width: 1024px) {
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 }
 .description {
@@ -43,6 +79,13 @@
   line-height: 21px;
   color: var(--white);
   margin-top: 224px;
+  @media (max-width: 1024px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  @media (max-width: $layout-breakpoint-small) {
+    margin-top: 36px;
+  }
   .tools {
     display: inline-block;
     position: relative;
@@ -62,9 +105,24 @@
 .boxImage {
   grid-area: image;
   border-left: 1px solid var(--white);
-  width: 50vw;
+  width: 48vw;
   margin-left: 50px;
   padding: 50px;
+  @media (max-width: $layout-breakpoint-medium) {
+    padding: 25px;
+    margin-left: 25px;
+  }
+  @media (max-width: $layout-breakpoint-small) {
+    padding: 0;
+    margin-left: 0px;
+    width: 100%;
+  }
+  @media (max-width: $layout-breakpoint-xsmall) {
+  }
+  .image {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .links {
@@ -74,6 +132,13 @@
   gap: 10px;
   justify-content: flex-end;
   padding-bottom: 50px;
+  @media (max-width: $layout-breakpoint-small) {
+    margin-top: 24px;
+    justify-content: flex-start;
+  }
+  @media (max-width: $layout-breakpoint-xsmall) {
+    padding-bottom: 36px;
+  }
 }
 
 .nextProject {

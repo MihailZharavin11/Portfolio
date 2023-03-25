@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import styles from "./home.module.scss";
 import { FirstSection } from "../../components/FirstSection";
 import { SecondSection } from "../../components/SecondSection";
