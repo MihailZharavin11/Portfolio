@@ -36,9 +36,9 @@ export const Project = ({
             TOOLS:{" "}
             {tools.map((tool, index, arr) => {
               if (index + 1 === arr.length) {
-                return <>{tool}</>;
+                return <React.Fragment key={index}>{tool}</React.Fragment>;
               }
-              return <>{tool} | </>;
+              return <React.Fragment key={index}>{tool} | </React.Fragment>;
             })}
           </p>
           <p className={styles.descriptionText}>{description}</p>

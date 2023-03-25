@@ -41,15 +41,6 @@ export const Header = ({ workRef, contactRef }) => {
             CONTACT
           </li>
         </ul>
-        <div
-          onClick={() => {
-            setOpen((prev) => !prev);
-          }}
-          className={`${styles.burger} ${isOpen ? styles.active : ""}`}
-        >
-          <span></span>
-          <span></span>
-        </div>
       </div>
     </div>
   );

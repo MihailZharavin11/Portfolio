@@ -33,7 +33,8 @@
       list-style-type: none;
       gap: 80px;
       @media (max-width: $layout-breakpoint-xsmall) {
-        display: none;
+        flex-direction: column;
+        gap: 8px;
       }
       .navigationItem {
         font-family: "Oswald";
@@ -42,43 +43,12 @@
         font-size: 20px;
         line-height: 30px;
         cursor: pointer;
+        @media (max-width: $layout-breakpoint-xsmall) {
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 21px;
+        }
       }
     }
   }
-}
-
-.burger {
-  display: none;
-  margin: auto 0;
-  position: relative;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  @media (max-width: $layout-breakpoint-xsmall) {
-    display: block;
-  }
-  span {
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    border-radius: 10px;
-    background: var(--white);
-    transition: 0.3s linear;
-  }
-  span:nth-child(1) {
-    top: 12px;
-  }
-  span:nth-child(2) {
-    bottom: 12px;
-  }
-}
-
-.burger.active span:nth-child(1) {
-  top: 12px;
-  transform: rotate(45deg);
-}
-.burger.active span:nth-child(2) {
-  bottom: 24px;
-  transform: rotate(-45deg);
 }

@@ -8,9 +8,11 @@ import { ElementContext } from "../../App";
 export const ThirdSection = ({ workRef }) => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.title}>PROJECT</div>
+      <div ref={workRef} className={styles.title}>
+        PROJECT
+      </div>
       <div className={styles.cardWrapper}>
-        <div ref={workRef} className={styles.cardsTop}>
+        <div className={styles.cardsTop}>
           {projectItemTop.map((item, index) => (
             <ProjectItem
               key={item.title}
