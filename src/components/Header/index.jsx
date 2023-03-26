@@ -25,6 +25,7 @@ export const Header = ({ workRef, contactRef }) => {
         </div>
         <ul className={styles.navigation}>
           <li
+            data-text="WORK"
             onClick={() => {
               handleClickListItem("work", workRef);
             }}
@@ -33,6 +34,7 @@ export const Header = ({ workRef, contactRef }) => {
             WORK
           </li>
           <li
+            data-text="CONTACT"
             onClick={() => {
               handleClickListItem("contacts", contactRef);
             }}
