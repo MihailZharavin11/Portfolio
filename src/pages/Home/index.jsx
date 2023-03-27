@@ -8,7 +8,7 @@ import { FifthSection } from "../../components/FifthSection";
 import { Footer } from "../../components/Footer";
 import { useLocation } from "react-router-dom";
 import { scrollToElement } from "../../utils/lib/scrollTo";
-
+import { motion } from "framer-motion";
 export const Home = ({ workRef, contactRef }) => {
   const { state } = useLocation();
 

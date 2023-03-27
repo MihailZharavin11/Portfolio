@@ -4,6 +4,7 @@ import styles from "./project.module.scss";
 import { Link, useLocation } from "react-router-dom";
 import Arrow from "../../utils/images/arrow.svg";
 import logoPRJ from "../../utils/images/logoProject.jpg";
+import { motion } from "framer-motion";
 
 export const Project = ({
   title,
@@ -15,6 +16,7 @@ export const Project = ({
   nextProjectLink,
   webSite,
   gitLink,
+  backgroundColor,
 }) => {
   const { pathname } = useLocation();
 
@@ -24,6 +26,47 @@ export const Project = ({
 
   return (
     <div className={styles.wrapper}>
+      <motion.div
+        className={styles.backColor}
+        data-bcg={title}
+        style={{
+          background: backgroundColor,
+        }}
+        transition={{
+          delay: "0.7",
+          duration: "0.7",
+        }}
+        initial={{
+          height: "100%",
+        }}
+        animate={{
+          height: "0%",
+        }}
+      >
+        <h1 className={styles.backTitle}>{title}</h1>
+      </motion.div>
+      <motion.div
+        data-bcg={title}
+        style={{
+          position: "fixed",
+          top: "0",
+          left: "0",
+          width: "100%",
+          height: "100%",
+          background: "black",
+          zIndex: "20",
+          overflow: "hidden",
+        }}
+        transition={{
+          duration: "0.7",
+        }}
+        initial={{
+          height: "100%",
+        }}
+        animate={{
+          height: "0%",
+        }}
+      ></motion.div>
       <div className={styles.projectDescriptionInner}>
         <div className={styles.title}>
           <h1 className={styles.titleText}>{title}</h1>

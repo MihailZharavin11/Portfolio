@@ -4,7 +4,6 @@ import styles from "./header.module.scss";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { scrollToElement } from "../../utils/lib/scrollTo";
 export const Header = ({ workRef, contactRef }) => {
-  const [isOpen, setOpen] = useState(false);
   const { pathname } = useLocation();
   const navigate = useNavigate();
 

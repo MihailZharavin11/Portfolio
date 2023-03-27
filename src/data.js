@@ -20,6 +20,7 @@ export const filmX = {
   nextProjectLink: "/rick-morty",
   gitLink: "https://github.com/MihailZharavin11/FilmX",
   webSite: "https://film-x.vercel.app/",
+  backgroundColor: "#3d48bf",
 };
 
 export const rickAndMorty = {
@@ -34,6 +35,7 @@ export const rickAndMorty = {
   nextProjectLink: "/notes",
   gitLink: "https://github.com/MihailZharavin11/Rick-Morty",
   webSite: "https://rick-morty-snowy-nine.vercel.app/",
+  backgroundColor: "#3da8bf",
 };
 
 export const notes = {
@@ -57,6 +59,7 @@ export const notes = {
   nextProjectLink: "/fakeChat",
   gitLink: "https://github.com/MihailZharavin11/noteApp",
   webSite: "https://note-app-kappa-eight.vercel.app/",
+  backgroundColor: "#e99f5b",
 };
 
 export const fakeChat = {
@@ -75,6 +78,7 @@ export const fakeChat = {
   Messages are sorted by time, unread messages are marked`,
   gitLink: "https://github.com/MihailZharavin11/Fake-Chat",
   webSite: "https://vercel.com/mihailzharavin11/fakechat",
+  backgroundColor: "#763dbf",
 };
 
 export const projectItemTop = [

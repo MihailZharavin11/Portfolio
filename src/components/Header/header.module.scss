@@ -34,9 +34,11 @@
       gap: 80px;
       height: 30px;
       overflow: hidden;
-      @media (max-width: $layout-breakpoint-xsmall) {
+
+      @media (max-width: $layout-breakpoint-small) {
         flex-direction: column;
         gap: 8px;
+        height: auto;
       }
       .navigationItem {
         font-family: "Oswald";
@@ -47,6 +49,9 @@
         cursor: pointer;
         margin-top: -30px;
         transition: 0.3s ease;
+        @media (max-width: $layout-breakpoint-small) {
+          margin-top: 0;
+        }
         &:hover {
           margin-top: 0;
         }
@@ -54,6 +59,11 @@
           content: attr(data-text);
           display: block;
           color: var(--white);
+          z-index: -20;
+          overflow: hidden;
+          @media (max-width: $layout-breakpoint-small) {
+            content: "";
+          }
         }
         @media (max-width: $layout-breakpoint-xsmall) {
           font-weight: 300;

@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import React from "react";
 import { ProjectItem } from "../ProjectItem";
 import styles from "./thirdSection.module.scss";
 import { projectItemBottom } from "../../data.js";
@@ -18,6 +18,7 @@ export const ThirdSection = ({ workRef }) => {
               title={item.title}
               year={item.year}
               type={item.type}
+              backgroundColor={item.backgroundColor}
               index={index + 1}
               path={item.path}
             />
@@ -27,6 +28,7 @@ export const ThirdSection = ({ workRef }) => {
           {projectItemBottom.map((item, index) => (
             <ProjectItem
               key={item.title}
+              backgroundColor={item.backgroundColor}
               title={item.title}
               year={item.year}
               type={item.type}
