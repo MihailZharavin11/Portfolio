@@ -164,9 +164,34 @@
     font-size: 16px;
     line-height: 21px;
     color: var(--white);
-    gap: 4px;
-    .linkImg {
-      animation: arrowMove 1s ease-in-out infinite;
+    gap: 20px;
+    overflow: hidden;
+    &:hover .imageBlock .linkImg {
+      transition: 0.3 ease;
+      margin-left: 0px;
+    }
+    .linkTitle {
+      display: block;
+      overflow: hidden;
+      z-index: 200;
+    }
+
+    .imageBlock {
+      width: 30px;
+      display: flex;
+      gap: 30px;
+      overflow: hidden;
+      .linkImg {
+        transition: 0.3s ease;
+        margin-left: -49px;
+      }
+      &::after {
+        display: block;
+        margin-top: 5px;
+        content: url("../../utils/images/arrow.svg");
+        color: var(--white);
+        overflow: hidden;
+      }
     }
     @media (max-width: $layout-breakpoint-medium) {
       font-size: 14px;
@@ -180,6 +205,10 @@
     font-size: 80px;
     line-height: 119px;
     color: grey;
+    cursor: default;
+    &:hover {
+      color: var(--white);
+    }
     @media (max-width: $layout-breakpoint-medium) {
       font-size: 56px;
       line-height: 83px;

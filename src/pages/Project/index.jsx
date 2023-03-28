@@ -79,9 +79,17 @@ export const Project = ({
             TOOLS:{" "}
             {tools.map((tool, index, arr) => {
               if (index + 1 === arr.length) {
-                return <React.Fragment key={index}>{tool}</React.Fragment>;
+                return (
+                  <React.Fragment key={index}>
+                    {tool.toUpperCase()}
+                  </React.Fragment>
+                );
               }
-              return <React.Fragment key={index}>{tool} | </React.Fragment>;
+              return (
+                <React.Fragment key={index}>
+                  {tool.toUpperCase()} |{" "}
+                </React.Fragment>
+              );
             })}
           </p>
           <p className={styles.descriptionText}>{description}</p>
@@ -96,9 +104,15 @@ export const Project = ({
       </div>
       {nextProject && (
         <div className={styles.nextProject}>
-          <Link to={nextProjectLink} className={styles.nextProjectLink}>
+          <Link
+            data-arrow={Arrow}
+            to={nextProjectLink}
+            className={styles.nextProjectLink}
+          >
             <span className={styles.linkTitle}>NEXT PROJECT</span>{" "}
-            <img className={styles.linkImg} src={Arrow} alt="Arrow" />
+            <div className={styles.imageBlock}>
+              <img className={styles.linkImg} src={Arrow} alt="Arrow" />
+            </div>
           </Link>
           <div className={styles.nextProjectTitle}>{nextProject}</div>
         </div>
