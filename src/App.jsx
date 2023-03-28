@@ -36,6 +36,7 @@ const App = () => {
                 type={filmX.type}
                 year={filmX.year}
                 webSite={filmX.webSite}
+                image={filmX.image}
               />
             }
           />
@@ -53,6 +54,7 @@ const App = () => {
                 type={rickAndMorty.type}
                 year={rickAndMorty.year}
                 webSite={rickAndMorty.webSite}
+                image={rickAndMorty.image}
               />
             }
           />
@@ -70,6 +72,7 @@ const App = () => {
                 type={notes.type}
                 year={notes.year}
                 webSite={notes.webSite}
+                image={notes.image}
               />
             }
           />
@@ -87,6 +90,7 @@ const App = () => {
                 type={fakeChat.type}
                 year={fakeChat.year}
                 webSite={fakeChat.webSite}
+                image={fakeChat.image}
               />
             }
           />

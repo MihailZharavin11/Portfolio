@@ -3,7 +3,6 @@ import { Button } from "../../components/button";
 import styles from "./project.module.scss";
 import { Link, useLocation } from "react-router-dom";
 import Arrow from "../../utils/images/arrow.svg";
-import logoPRJ from "../../utils/images/logoProject.jpg";
 import { motion } from "framer-motion";
 
 export const Project = ({
@@ -17,6 +16,7 @@ export const Project = ({
   webSite,
   gitLink,
   backgroundColor,
+  image,
 }) => {
   const { pathname } = useLocation();
 
@@ -91,7 +91,7 @@ export const Project = ({
           <Button title={`<VISIT WEBSITE/>`} primary={true} path={webSite} />
         </div>
         <div className={styles.boxImage}>
-          <img className={styles.image} src={logoPRJ} alt="Dragon" />
+          <img className={styles.image} src={image} alt="ScreenProject" />
         </div>
       </div>
       {nextProject && (

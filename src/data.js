@@ -1,3 +1,8 @@
+import NotesImage from "./utils/images/Notes.jpg";
+import FakeChatImage from "./utils/images/fakeChat.jpg";
+import FilmXImage from "./utils/images/FILMX.jpg";
+import RickAndMortyImage from "./utils/images/RickAndMorty.jpg";
+
 export const filmX = {
   type: "CASE STUDY",
   year: "2022",
@@ -21,6 +26,7 @@ export const filmX = {
   gitLink: "https://github.com/MihailZharavin11/FilmX",
   webSite: "https://film-x.vercel.app/",
   backgroundColor: "#3d48bf",
+  image: FilmXImage,
 };
 
 export const rickAndMorty = {
@@ -36,6 +42,7 @@ export const rickAndMorty = {
   gitLink: "https://github.com/MihailZharavin11/Rick-Morty",
   webSite: "https://rick-morty-snowy-nine.vercel.app/",
   backgroundColor: "#3da8bf",
+  image: RickAndMortyImage,
 };
 
 export const notes = {
@@ -60,6 +67,7 @@ export const notes = {
   gitLink: "https://github.com/MihailZharavin11/noteApp",
   webSite: "https://note-app-kappa-eight.vercel.app/",
   backgroundColor: "#e99f5b",
+  image: NotesImage,
 };
 
 export const fakeChat = {
@@ -79,6 +87,7 @@ export const fakeChat = {
   gitLink: "https://github.com/MihailZharavin11/Fake-Chat",
   webSite: "https://vercel.com/mihailzharavin11/fakechat",
   backgroundColor: "#763dbf",
+  image: FakeChatImage,
 };
 
 export const projectItemTop = [
